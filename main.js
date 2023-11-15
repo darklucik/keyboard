@@ -1,17 +1,18 @@
-const inputField = document.getElementById('input');
-const keys = document.getElementsByClassName('key');
+let capsLock = false;
+let shift = false;
 
+function handleKeyPress(key) {
+  const inputField = document.getElementById('input-field');
 
-for (let i = 0; i < keys.length; i++) {
-  keys[i].addEventListener('click', function() {
-    inputField.value += this.innerHTML;
-  });
-}
-
-
-document.addEventListener('keydown', function(event) {
-  const key = event.key.toUpperCase();
-  if (/^[A-Z]$/.test(key)) {
-    inputField.value += key;
+  if (key === 'backspace') {
+    inputField.value = inputField.value.slice(0, -1);
+  } else if (key === 'shift') {
+    shift = !shift;
+  } else if (key === 'capslock') {
+    capsLock = !capsLock;
+  } else {
+    const letter = capsLock ? key.toUpperCase() : key.toLowerCase();
+    inputField.value += shift ? letter.toUpperCase() : letter.toLowerCase();
+    shift = false;
   }
-});
+}

@@ -7,41 +7,46 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="input">
-<div id="keyboard">
-  <div class="row">
-    <div class="key">Q</div>
-    <div class="key">W</div>
-    <div class="key">E</div>
-    <div class="key">R</div>
-    <div class="key">T</div>
-    <div class="key">Y</div>
-    <div class="key">U</div>
-    <div class="key">I</div>
-    <div class="key">O</div>
-    <div class="key">P</div>
+  <input id="input-field" type="text">
+  <div id="keyboard-container"> 
+    <div class="row">
+      <div class="key" onclick="handleKeyPress('q')">Q</div>
+      <div class="key" onclick="handleKeyPress('w')">W</div>
+      <div class="key" onclick="handleKeyPress('e')">E</div>
+      <div class="key" onclick="handleKeyPress('r')">R</div>
+      <div class="key" onclick="handleKeyPress('t')">T</div>
+      <div class="key" onclick="handleKeyPress('y')">Y</div>
+      <div class="key" onclick="handleKeyPress('u')">U</div>
+      <div class="key" onclick="handleKeyPress('i')">I</div>
+      <div class="key" onclick="handleKeyPress('o')">O</div>
+      <div class="key" onclick="handleKeyPress('p')">P</div>
+      <div class="key" onclick="handleKeyPress('backspace')">back space</div>
+      <div class="key" onclick="handleKeyPress('shift')">Shift</div>
   </div>
-  <div class="row">
-    <div class="key">A</div>
-    <div class="key">S</div>
-    <div class="key">D</div>
-    <div class="key">F</div>
-    <div class="key">G</div>
-    <div class="key">H</div>
-    <div class="key">J</div>
-    <div class="key">K</div>
-    <div class="key">L</div>
+    <div class="row">
+      <div class="key" onclick="handleKeyPress('a')">A</div>
+      <div class="key" onclick="handleKeyPress('s')">S</div>
+      <div class="key" onclick="handleKeyPress('d')">D</div>
+      <div class="key" onclick="handleKeyPress('f')">F</div>
+      <div class="key" onclick="handleKeyPress('g')">G</div>
+      <div class="key" onclick="handleKeyPress('h')">H</div>
+      <div class="key" onclick="handleKeyPress('j')">J</div>
+      <div class="key" onclick="handleKeyPress('k')">K</div>
+      <div class="key" onclick="handleKeyPress('l')">L</div>
+    </div>
+   <div class="row">
+    <div class="key" onclick="handleKeyPress('z')">Z</div>
+   <div class="key" onclick="handleKeyPress('x')">X</div>
+   <div class="key" onclick="handleKeyPress('c')">C</div>
+   <div class="key" onclick="handleKeyPress('v')">V</div>
+   <div class="key" onclick="handleKeyPress('b')">B</div>
+   <div class="key" onclick="handleKeyPress('n')">N</div>
+   <div class="key" onclick="handleKeyPress('m')">M</div>
   </div>
-  <div class="row">
-    <div class="key">Z</div>
-    <div class="key">X</div>
-    <div class="key">C</div>
-    <div class="key">V</div>
-    <div class="key">B</div>
-    <div class="key">N</div>
-    <div class="key">M</div>
+    
   </div>
-</div>
+
+  
 
 <script src="./main.js"></script>
 </body>
