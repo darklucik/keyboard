@@ -2,7 +2,7 @@ let capsLock = false;
 let shift = false;
 
 function handleKeyPress(key) {
-  const inputField = document.getElementById('input-field');
+  const inputField = document.getElementById('input');
 
   if (key === 'backspace') {
     inputField.value = inputField.value.slice(0, -1);
