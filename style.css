@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border-radius: 12px;
+  border: 1px solid gray;
+  padding: 20px;
 }
 .key {
   width: 50px;
@@ -22,6 +25,9 @@
   height: 50px;
   font-size: 20px;
   margin-bottom: 12px;
+  border: 1px solid whitesmoke;
+  border-radius: 12px;
+  margin-bottom: 10px;
 }
 
 .row {

@@ -1,6 +1,10 @@
 let capsLock = false;
 let shift = false;
 
+let keyboardButton = document.getElementsByClassName('key')
+
+console.log(keyboardButton)
+
 function handleKeyPress(key) {
   const inputField = document.getElementById('input');
 
