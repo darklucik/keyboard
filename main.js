@@ -1,22 +1,32 @@
 let capsLock = false;
 let shift = false;
 
-let keyboardButton = document.getElementsByClassName('key')
+const keys = document.querySelectorAll(".key");
+const inputField = document.getElementById("input");
+const backspaceBtn = document.getElementsByClassName('backspace')
 
-console.log(keyboardButton)
+let key = keys
+let backspace = backspaceBtn
 
-function handleKeyPress(key) {
-  const inputField = document.getElementById('input');
 
-  if (key === 'backspace') {
-    inputField.value = inputField.value.slice(0, -1);
-  } else if (key === 'shift') {
-    shift = !shift;
-  } else if (key === 'capslock') {
-    capsLock = !capsLock;
-  } else {
-    const letter = capsLock ? key.toUpperCase() : key.toLowerCase();
-    inputField.value += shift ? letter.toUpperCase() : letter.toLowerCase();
-    shift = false;
-  }
-}
+document.body.addEventListener("keydown", (event) => {
+  inputField.focus();
+
+  keys.forEach((k) => {
+    if (event.key.toLowerCase() === k.innerHTML.toLowerCase()) {
+      k.classList.add("_active");
+    }
+  });
+});
+
+document.body.addEventListener("keyup", (event) => {
+  keys.forEach((k) => {
+    if (event.key.toLowerCase() === k.innerHTML.toLowerCase()) {
+      k.classList.remove("_active");
+    }
+  });
+});
+
+
+
+

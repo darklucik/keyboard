@@ -6,6 +6,7 @@
   border: 1px solid gray;
   padding: 20px;
 }
+
 .key {
   width: 50px;
   height: 50px;
@@ -18,6 +19,12 @@
   background-color: lightgray;
   border-radius: 5px;
 }
+
+.key._active {
+  background-color: royalblue;
+  color: white;
+}
+
 #input {
   margin-top: 10px;
   padding: 5px;
@@ -33,4 +40,21 @@
 .row {
   display: flex;
   gap: 10px;
+}
+
+.backspace {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 10px;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+.backspace._active {
+  background-color: royalblue;
+  color: white;
 }
